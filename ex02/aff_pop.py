@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 from load_csv import load
 
+
 def best_function(index):
+    """Change form character-form to number-from"""
     m = 1
     if index[-1] == 'M':
         m = 1e6
@@ -14,7 +16,9 @@ def best_function(index):
     return float(index) * m
 
 
-def plot_country_life_expectancy(country_name1: str, country_name2: str, csv_path: str):
+def population_between_2_country(country_name1: str,
+                                 country_name2: str, csv_path: str):
+    """Display difference between population of 2 country"""
     try:
         df = load(csv_path)
         if df is None:

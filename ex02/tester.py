@@ -1,2 +1,2 @@
-from aff_pop import plot_country_life_expectancy
-plot_country_life_expectancy("Germany", "Vietnam", "population_total.csv")
+from aff_pop import population_between_2_country
+population_between_2_country("Germany", "Vietnam", "population_total.csv")

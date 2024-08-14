@@ -3,6 +3,7 @@ from load_csv import load
 
 
 def plot_country_life_expectancy(country_name: str, csv_path: str):
+    """Display plot about life expectancy of a country"""
     try:
         df = load(csv_path)
 
@@ -21,7 +22,7 @@ def plot_country_life_expectancy(country_name: str, csv_path: str):
         return None
 
     plt.figure(figsize=(10, 6))
-    plt.plot(years, life_expectancy, marker='o', color='b', label=country_name)
+    plt.plot(years, life_expectancy, color='b', label=country_name)
     plt.xlabel("Year")
     plt.ylabel("life_expectancy")
     plt.title(f"Life expectancy over time for {country_name}")

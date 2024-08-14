@@ -1,0 +1,26 @@
+curl https://pyenv.run | bash
+
+export PATH=/Users/qdo/.pyenv/bin/pyenv:$PATH
+
+pyenv install --list
+pyenv install 3.12.5 -y
+pyenv global 3.12.5
+pyenv local 3.12.5
+pyenv version
+python --version
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+source ~/.zshrc
+# source ~/.bashrc  # or , depending on your shell
+pyenv rehash
+python --version
+python3 --version
+
+
+pip3 install numpy
+pip3 install pillow
+pip3 install matplotlib
+pip3 install scipy
